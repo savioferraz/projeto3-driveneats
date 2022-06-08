@@ -1,0 +1,106 @@
+@media (max-width: 480px){
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #E5E5E5;
+}
+header {
+    background-color: #CF2B2B;
+    width: 100%;
+    position: fixed;
+    height: 92px;
+    top: 0;
+    left: 0%;
+    padding-left: 21px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+header h1 {
+    font-family: Righteous;
+    font-size: 44px;
+    color: #ffffff;
+    font-weight: 400;
+    padding-top: 8px;
+}
+header p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 21px;
+    padding-bottom: 18px;
+}
+.content {
+    margin-top: 123px;
+    height: 842px;
+    background-color: #E5E5E5;
+    margin-left: 3px;  
+}
+.content h1 {
+    font-family: righteous;
+    font-size: 26px;
+    color: #333333;
+    margin: 27px 0 17px 19px;
+}
+.cardapio {    
+    height: 202px;
+    display: flex;
+}
+.itens {
+    background-color: #ffffff;
+    height: 202px;
+    width: 172px;
+    margin: 0 16px;
+    border-radius: 9px;
+    font-family: Roboto;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25)   
+}
+.itens img {
+    width: 144px;
+    height: 87px;
+    margin: 18px 14px 8px 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.itens h2 {    
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px 14px;
+    color: #333333;
+}
+.itens h3 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #a6a6a6;
+    margin: 0 11px 5px 14px;
+    overflow: scroll;
+    height: 32px;
+}
+.itens h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-left: 14px;
+}
+.bottom {
+    position: fixed;
+    height: 92px;
+    width: 100%;
+    background-color: #ffffff;
+    bottom: 0;   
+}
+.finalizar {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #ffffff;
+    width: 364px;
+    height: 61px;
+    background-color: #cbcbcb;
+    border-radius: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 6px 75px 0 75px;    
+    margin: 16px 25px;
+}
+}
