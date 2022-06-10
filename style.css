@@ -43,6 +43,12 @@ header p {
 .cardapio {    
     height: 202px;
     display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.cardapio::-webkit-scrollbar {
+    display: none;
 }
 .itens {
     background-color: #ffffff;
