@@ -1,8 +1,7 @@
-@media (max-width: 480px){
 body {
-    height: 100%;
-    width: 100%;
     background-color: #E5E5E5;
+    width: 100%;
+    height: 100%;
 }
 header {
     background-color: #CF2B2B;
@@ -10,7 +9,7 @@ header {
     position: fixed;
     height: 92px;
     top: 0;
-    left: 0%;
+    left: 0;
     padding-left: 21px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -52,13 +51,28 @@ header p {
     margin: 0 16px;
     border-radius: 9px;
     font-family: Roboto;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25)   
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    position: relative;   
+}
+.icone {
+    color: #ffffff;
+    background-color: #32B72F;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.selecionado {
+    border: 3px solid #32B72F;
+}
+.escondido {
+    display: none;
 }
 .itens img {
     width: 144px;
     height: 87px;
     margin: 18px 14px 8px 14px;
-    border: 1px solid black;
     border-radius: 4px;
 }
 .itens h2 {    
@@ -74,6 +88,11 @@ header p {
     margin: 0 11px 5px 14px;
     overflow: scroll;
     height: 32px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.itens h3::-webkit-scrollbar {
+    display: none;
 }
 .itens h4 {
     font-size: 16px;
@@ -102,5 +121,4 @@ header p {
     box-sizing: border-box;
     padding: 6px 75px 0 75px;    
     margin: 16px 25px;
-}
 }
