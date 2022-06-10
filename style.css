@@ -32,7 +32,13 @@ header p {
     margin-top: 123px;
     height: 842px;
     background-color: #E5E5E5;
-    margin-left: 3px;  
+    margin-left: 3px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
+}
+.content::-webkit-scrollbar {
+    display: none;
 }
 .content h1 {
     font-family: righteous;
