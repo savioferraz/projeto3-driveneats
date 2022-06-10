@@ -14,3 +14,6 @@ Versão 2.1
 
 Versão 2.1.1
 -Adicionado scroll vertical à div "content";
+
+Versão 2.2
+-Ajustes de layout nas barras fixas;
