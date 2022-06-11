@@ -78,8 +78,7 @@ header p {
     bottom: 8px;
 }
 .selecionado {
-    border: 3px solid #32B72F;
-    transition: 0.2s;
+    box-shadow: inset -4px -4px #32B72F, inset 4px 4px #32B72F;
 }
 .escondido {
     display: none;
@@ -136,4 +135,10 @@ header p {
     box-sizing: border-box;
     padding: 6px 75px 0 75px;    
     margin: 16px auto;
+}
+.finalizado {
+    background-color: #32B72F;
+    z-index: 1;
+    padding-top: 19px;
+    font-weight: 700;
 }
