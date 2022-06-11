@@ -48,14 +48,14 @@ header p {
     color: #333333;
     margin: 27px 0 17px 19px;
 }
-.cardapio {    
+.cardapiocomida, .cardapiobebida, .cardapiosobremesa {    
     height: 202px;
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-.cardapio::-webkit-scrollbar {
+.cardapiocomida::-webkit-scrollbar, .cardapiobebida::-webkit-scrollbar, .cardapiosobremesa::-webkit-scrollbar {
     display: none;
 }
 .itens {
@@ -69,16 +69,17 @@ header p {
     box-sizing: border-box;
     position: relative;   
 }
-.icone {
+.icone ion-icon {
     color: #ffffff;
     background-color: #32B72F;
     border-radius: 50%;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 8px;
+    bottom: 8px;
 }
 .selecionado {
     border: 3px solid #32B72F;
+    transition: 0.2s;
 }
 .escondido {
     display: none;
@@ -134,5 +135,5 @@ header p {
     text-align: center;
     box-sizing: border-box;
     padding: 6px 75px 0 75px;    
-    margin: 16px 25px;
+    margin: 16px auto;
 }
