@@ -1,6 +1,11 @@
 # projeto3-driveneats
 Projeto 3 - DrivenEats (curso Driven)
 
+Changelog:
+
+Versão 3.0
+-Adicionada função selecionar;
+
 Versão 2.2
 -Ajustes de layout nas barras fixas;
 
