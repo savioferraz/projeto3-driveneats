@@ -142,3 +142,60 @@ header p {
     padding-top: 19px;
     font-weight: 700;
 }
+.telaconfirmar {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250,250,250,0.60);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.confirmar {
+    width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    margin: 30vh auto;
+    font-family: Roboto;
+    font-size: 22px;
+    padding-top: 23px;
+    border-radius: 9px;
+}
+.tituloconfirmar {
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 27px;
+    border: 1px solid #000000;
+}
+.pratoconfirmar, .bebidaconfirmar, .sobremesaconfirmar, .totalconfirmar {
+    color: #ffffff;
+    font-weight: 400;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 26px;
+}
+.totalconfirmar {
+    font-weight: 700;
+}
+.confirmarpedido, .cancelar {
+    color: #50D074;
+    background-color: #ffffff;
+    font-weight: 700;
+    width: 333px;
+    height: 52px;
+    border-radius: 100px;
+    margin: 24px 24px 12px 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.cancelar {
+    color: #ffffff;
+    background-color: #50D074;
+    margin-top: 0;
+}

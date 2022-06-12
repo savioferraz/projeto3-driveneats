@@ -1,13 +1,17 @@
 let escolhaprato;
 let escolhabebida;
 let escolhasobremesa;
+let pratoselecionado;
+let bebidaselecionada;
+let sobremesaselecionada;
 let valorprato;
 let valorbebida;
 let valorsobremesa;
 
 function selecionarprato(elemento) {
     valorprato = document.querySelector("span").innerHTML;
-    escolhaprato = document.querySelector(".cardapiocomida .selecionado");   
+    escolhaprato = document.querySelector(".cardapiocomida .selecionado");
+    pratoselecionado = document.querySelector("h2").innerHTML;   
     if (escolhaprato !== null) {
         escolhaprato.classList.remove("selecionado");
     }
@@ -17,7 +21,8 @@ function selecionarprato(elemento) {
 }
 function selecionarbebida(elemento) {
     valorbebida = document.querySelector("span").innerHTML;
-    escolhabebida = document.querySelector(".cardapiobebida .selecionado");   
+    escolhabebida = document.querySelector(".cardapiobebida .selecionado");
+    bebidaselecionada = document.querySelector("h2").innerHTML;
     if (escolhabebida !== null) {
         escolhabebida.classList.remove("selecionado");
     }
@@ -27,7 +32,8 @@ function selecionarbebida(elemento) {
 }
 function selecionarsobremesa(elemento) {
     valorsobremesa = document.querySelector("span").innerHTML;
-    escolhasobremesa = document.querySelector(".cardapiosobremesa .selecionado");   
+    escolhasobremesa = document.querySelector(".cardapiosobremesa .selecionado");
+    sobremesaselecionada = document.querySelector("h2").innerHTML;   
     if (escolhasobremesa !== null) {
         escolhasobremesa.classList.remove("selecionado");
     }
@@ -52,7 +58,22 @@ function liberarbotao(){
 }
 function finalizar(){
     if (valorprato && valorbebida && valorsobremesa){
-        alert("Você está sendo redirecionado ao nosso Whatsapp.");
-        window.location = `https://wa.me/5581997459919?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A-%20Prato%3A%20Frango%20Yin%20Yang-%20Bebida%3A%20Coquinha%20Gelada-%20Sobremesa%3A%20PudimTotal%3A%20R%24%2027.70`;        
+        valorprato = Number(valorprato);
+        valorbebida = Number(valorbebida);
+        valorsobremesa = Number(valorsobremesa);
+        let total = (valorprato + valorbebida + valorsobremesa);
+        let msgfinal = (`Você escolheu: 
+        - ${pratoselecionado} (R$ ${valorprato}) 
+        - ${bebidaselecionada} (R$ ${valorbebida}) 
+        - ${sobremesaselecionada} (R$ ${valorsobremesa})
+        
+        
+        - Total: R$ ${total} 
+        
+        Qual a forma de pagamento?`);
+        alert (msgfinal);
+        let msgencript = encodeURI(msgfinal);
+        alert (msgencript);
+        window.location = `https://wa.me/5581997459919?text=${msgencript}`;        
     }
 }
