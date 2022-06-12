@@ -3,6 +3,13 @@ Projeto 3 - DrivenEats (curso Driven)
 
 Changelog:
 
+Versão 4.1:
+-Adicionada Tela de confirmação;
+-Pendente scripts na tela de confirmação;
+
+Versão 4.0:
+-Adicionada função finalizar;
+
 Versão 3.0
 -Adicionada função selecionar;
 
