@@ -152,6 +152,7 @@ header p {
     left: 0;
     right: 0;
     bottom: 0;
+    transition: 0.5s;
 }
 .confirmar {
     width: 377px;
@@ -162,6 +163,7 @@ header p {
     font-size: 22px;
     padding-top: 23px;
     border-radius: 9px;
+    transition: 0.5s;
 }
 .tituloconfirmar {
     color: #ffffff;
@@ -169,9 +171,8 @@ header p {
     align-items: center;
     font-weight: 700;
     margin-bottom: 27px;
-    border: 1px solid #000000;
 }
-.pratoconfirmar, .bebidaconfirmar, .sobremesaconfirmar, .totalconfirmar {
+.secaoconfirmar, .totalconfirmar{
     color: #ffffff;
     font-weight: 400;
     height: 27px;

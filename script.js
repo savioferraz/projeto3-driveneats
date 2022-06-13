@@ -7,47 +7,64 @@ let sobremesaselecionada;
 let valorprato;
 let valorbebida;
 let valorsobremesa;
+let total;
 
 function selecionarprato(elemento) {
-    valorprato = document.querySelector("span").innerHTML;
+    valorprato = elemento.querySelector("span").innerHTML;
     escolhaprato = document.querySelector(".cardapiocomida .selecionado");
-    pratoselecionado = document.querySelector("h2").innerHTML;   
+    pratoselecionado = elemento.querySelector("h2").innerHTML;   
+    icone = elemento.querySelector(".icone");
+    check = elemento.querySelector(".escondido");
     if (escolhaprato !== null) {
         escolhaprato.classList.remove("selecionado");
     }
+    if (check !== null) {
+        icone.classList.add("escondido");
+        let check = null;
+    }
+    icone.classList.remove("escondido");
     valorprato = Number(valorprato);
     elemento.classList.add("selecionado");
     liberarbotao();
 }
 function selecionarbebida(elemento) {
-    valorbebida = document.querySelector("span").innerHTML;
+    valorbebida = elemento.querySelector("span").innerHTML;
     escolhabebida = document.querySelector(".cardapiobebida .selecionado");
-    bebidaselecionada = document.querySelector("h2").innerHTML;
+    bebidaselecionada = elemento.querySelector("h2").innerHTML;
+    icone = elemento.querySelector(".icone");
+    check = elemento.querySelector(".escondido");
     if (escolhabebida !== null) {
         escolhabebida.classList.remove("selecionado");
     }
+    if (check !== null) {
+        icone.classList.add("escondido");
+        let check = null;
+    }
+    icone.classList.remove("escondido");
     valorbebida = Number(valorbebida);
     elemento.classList.add("selecionado");
     liberarbotao();
 }
 function selecionarsobremesa(elemento) {
-    valorsobremesa = document.querySelector("span").innerHTML;
+    valorsobremesa = elemento.querySelector("span").innerHTML;
     escolhasobremesa = document.querySelector(".cardapiosobremesa .selecionado");
-    sobremesaselecionada = document.querySelector("h2").innerHTML;   
+    sobremesaselecionada = elemento.querySelector("h2").innerHTML;
+    icone = elemento.querySelector(".icone");
+    check = elemento.querySelector(".escondido");   
     if (escolhasobremesa !== null) {
         escolhasobremesa.classList.remove("selecionado");
     }
+    if (check !== null) {
+        icone.classList.add("escondido");
+        let check = null;
+    }
+    icone.classList.remove("escondido");
     valorsobremesa = Number(valorsobremesa);
     elemento.classList.add("selecionado");
     liberarbotao();  
 }
 function checkprato(elemento){
-    let icone = elemento.querySelector(".cardapiocomida .icone");
-    let check = icone.querySelector(".cardapiocomida .escondido")
-    if (check) {
-        check.classList.add("escondido");
-    }
-        icone.classList.remove("escondido");
+  
 }
 function liberarbotao(){
     if (valorprato && valorbebida && valorsobremesa){
@@ -56,24 +73,39 @@ function liberarbotao(){
         botao.innerHTML = "Finalizar Pedido";
     }
 }
-function finalizar(){
-    if (valorprato && valorbebida && valorsobremesa){
-        valorprato = Number(valorprato);
-        valorbebida = Number(valorbebida);
-        valorsobremesa = Number(valorsobremesa);
-        let total = (valorprato + valorbebida + valorsobremesa);
+function finalizar() {
+    telaconfirm = document.querySelector(".telaconfirmar");
+    telaconfirm.classList.remove("escondido");
+    textoprato = document.querySelector(".pratoconfirmar");
+    textoprato.innerHTML = pratoselecionado;
+    textobebida = document.querySelector(".bebidaconfirmar");
+    textobebida.innerHTML = bebidaselecionada;
+    textosobremesa = document.querySelector(".sobremesaconfirmar");
+    textosobremesa.innerHTML = sobremesaselecionada;
+    precoprato = document.querySelector(".precoprato");
+    precoprato.innerHTML = `R$ ${valorprato}0`;
+    precobebida = document.querySelector(".precobebida");
+    precobebida.innerHTML = `R$ ${valorbebida}0`;
+    precosobremesa = document.querySelector(".precosobremesa");
+    precosobremesa.innerHTML = `R$ ${valorsobremesa}0`;
+    total = (valorprato + valorbebida + valorsobremesa);
+    total = total.toFixed(2);
+    precototal = document.querySelector(".precototal");
+    precototal.innerHTML = `R$ ${total}`;    
+}
+function confirmar(){        
         let msgfinal = (`Você escolheu: 
         - ${pratoselecionado} (R$ ${valorprato}) 
         - ${bebidaselecionada} (R$ ${valorbebida}) 
         - ${sobremesaselecionada} (R$ ${valorsobremesa})
+        Total: R$ ${total} 
         
-        
-        - Total: R$ ${total} 
-        
-        Qual a forma de pagamento?`);
-        alert (msgfinal);
+        Nome:
+        Endereço:`);
         let msgencript = encodeURI(msgfinal);
-        alert (msgencript);
-        window.location = `https://wa.me/5581997459919?text=${msgencript}`;        
-    }
+        window.location = `https://wa.me/5581999999999?text=${msgencript}`;
+}
+function cancelar(){
+    let cancelamento = document.querySelector(".telaconfirmar");
+    cancelamento.classList.add("escondido");
 }
