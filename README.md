@@ -1,7 +1,14 @@
 # projeto3-driveneats
 Projeto 3 - DrivenEats (curso Driven)
 
+Projeto 3 do curso de desenvolvimento Full-stack da Driven.
+Consiste em planejar do zero um site de delivery de comida, no qual o usuário escolhe sua refeição entre 3 itens (prato principal, bebida e sobremesa) e após confirmação, uma mensagem com um resumo do pedido é enviada via Whatsapp para o número escolhido.
+
 Changelog:
+
+Versão 5.0:
+-Projeto finalizado;
+-Bug no ícone do check;
 
 Versão 4.1:
 -Adicionada Tela de confirmação;
